@@ -1,0 +1,39 @@
+Folder PATH listing for volume OS
+Volume serial number is B624-027E
+C:.
+¦   create_db.py
+¦   db.json
+¦   directory_structure.txt
+¦   main.py
+¦   
++---instance
+¦       test_db.db
+¦       
++---static
+¦   +---styles
+¦           common_styles.css
+¦           header_footer.css
+¦           index.css
+¦           login_style.css
+¦           movie_catalog.css
+¦           register_style.css
+¦           
++---templates
+¦       index.html
+¦       login.html
+¦       movie_catalog.html
+¦       movie_details.html
+¦       register.html
+¦       search_results.html
+¦       users.html
+¦       user_profile.html
+¦       _formhelpers.html
+¦       
++---__pycache__
+        app.cpython-310.pyc
+        forms.cpython-310.pyc
+        main.cpython-310.pyc
+        main.cpython-312.pyc
+        models.cpython-310.pyc
+        routes.cpython-310.pyc
+        

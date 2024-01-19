@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    
+    <style>
+      td, th, tr {
+	  border: 1px solid black;
+	  padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+	<th>ID</th>
+	<th>Username</th>
+	<th>Email</th>
+	<th>Age</th>	
+      </tr>
+      {% for user in users %}
+      <tr>
+	    <td> {{ user.id }}</td>
+	    <td> {{ user.username }} </td>
+    	<td> {{ user.email }} </td>
+    	<td> {{ user.age }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

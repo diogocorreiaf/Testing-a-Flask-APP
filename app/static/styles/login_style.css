@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E5E5E5;
+}
+
+header {
+    background-color: #C2B4D6;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    text-align: center;
+    margin: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 10px; 
+    border-radius: 8px;
+    box-shadow: 0 0 15px #934A5F;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

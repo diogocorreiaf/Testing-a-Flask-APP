@@ -1,0 +1,149 @@
+Scenario: Visiting the home page
+    Given the user opens the application
+    When the user navigates to the home page
+    Then the user should see the home page
+    And the response status should be 200
+
+  Scenario: Register button on home Page
+    Given the user is on the home page 
+    When the clicks the register button
+    Then the user should see the registration form
+    And the response status should be 200
+
+  Scenario: Login button on home page
+    Given the user is on the home page 
+    When the clicks the login button
+    Then the user should see the login form
+    And the response status should be 200
+
+  Scenario: Movie Catalog button on home
+    Given the user is on the home page 
+    When the clicks the movie catalog link
+    Then the user should see the movie Catalog page 
+    And the response status should be 200
+
+  Scenario: Acessing Movie Details while not logged on
+    Given the user is on the movie Catalog page
+    When the user is not logged in and clicks details button
+    Then the user should be redirected to the login page
+
+  Scenario: Register with Valid Information
+    Given the user opens the application
+    When the user registers with valid information
+    Then the user should be successfully registered and redirected to the login page
+
+    
+  Scenario: Register with Invalid Information
+    Given the user is on the registration page
+    When the user registers with invalid information
+    Then the user should remain on the same page and be shown flash error 
+
+  Scenario: Register with Existing Email
+    Given the user opens the application
+    When the user registers with an existing email
+    Then the registration should fail, and an error message should be displayed
+
+  Scenario: Login with Valid Credentials
+    Given the user is registered
+    When the user logs in with valid credentials
+    Then the user should be successfully logged in and redirected to the home page
+
+  Scenario: Login with Invalid Credentials
+    Given the user is registered
+    When the user logs in with invalid credentials
+    Then the login should fail, and an error message should be displayed
+
+  Scenario: Logout
+    Given the user is logged in
+    When the user clicks on the logout button
+    Then the user should be successfully logged out and redirected to the login page
+
+  Scenario: View User Profile
+    Given the user is logged in
+    When the user clicks on their profile
+    Then the user should see their profile information and number of rented movies
+
+  Scenario: View Another User's Profile
+    Given the user is logged in
+    When the user tries to view another user's profile
+    Then the user should be redirected to their own profile
+
+  Scenario: Search for Movie with Valid Query
+    Given the user is on the home page
+    When the user searches for a movie with a valid query
+    Then the user should see relevant search results
+
+  Scenario: Search for Movie with Empty Query
+    Given the user is on the home page
+    When the user searches for a movie with an empty query
+    Then the user should see all movies in the catalog
+
+  Scenario: Renting button
+    Given the user is logged in,
+    When the user clicks on the movie details page of the movie he pretends to rent
+    Then the renting button should be visible
+
+  Scenario: Renting form
+    Given the user is logged in, and on the movie details page of the movie he pretends to rent
+    When the user clicks Rent Movie
+    Then the renting form should be visible
+
+  Scenario: Confirm Renting
+    Given the user is on the renting form
+    When the user clicks Confirm Rental
+    Then the the database should be updated with the renting and the page should reload
+
+  Scenario View already rented movie
+    Given the user is logged in
+    When the user accesses the movie details page of a movie he already rented 
+    Then the renting form should not be visible
+
+  Scenario Accessing Invalid Movie Details
+    Given the user is logged in 
+    When the user accesses the movie details page of a movie he that doesnt exist 
+    Then the user should see an error page response status should be 404
+
+  Scenario: Navigate to Next Page in Movie Catalog
+    Given the user is on the movie catalog page 1
+    When the user presses the 'Next' button
+    Then they should be directed to page 2 of the movie catalog
+
+  Scenario: Navigating to Previous Page
+    Given the user is on the movie catalog page 2
+    When the user clicks the "Previous" button
+    Then the user should be redirected to page 1 of the movie catalog
+
+  Scenario: Clicking Home Button
+    Given the user is on the movie catalog page
+    When the user clicks the "Home" button
+    Then the user should be redirected to the home page
+
+  Scenario: Clicking Login Button
+    Given the user is on the movie catalog page
+    When the user clicks the "Login" button
+    Then the user should be redirected to the login page
+
+  Scenario: Clicking Register Button
+    Given the user is on the movie catalog page
+    When the user clicks the "Register" button
+    Then the user should be redirected to the registration page
+
+  Scenario: Clicking Home Button on Register Page
+    Given the user is on the registration page
+    When the user clicks the "Home" button
+    Then the user should be redirected to the home page
+
+  Scenario: Absence of Next Button on Last Page
+    Given the user is on page 13 of the movie catalog
+    When the user views the movie catalog
+    Then there should not be a "Next" button
+
+  Scenario: Absence of Previous Button on First Pag
+    Given the user is on page 1 of the movie catalog
+    When the user views the movie catalog
+    Then there should not be a "Previous" button
+
+  Scenario: Accessing Non-Existent Page
+    Given the user tries to access page 14 of the movie catalog
+    When the user attempts to view the movie catalog
+    Then the user should receive a 404 Not Found error

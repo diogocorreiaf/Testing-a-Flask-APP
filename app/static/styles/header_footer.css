@@ -1,0 +1,34 @@
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+    height: 130px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #333;
+    width: 100%;
+    height: 100px;
+}
+
+.btn_form:visited{
+    color: white;
+}
+
+.logged_in {
+    color: yellow;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.container-fluid > .header {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+}

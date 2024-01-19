@@ -1,0 +1,49 @@
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    
+}
+.movie-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.movie-item {
+    width: 23%;
+    margin-bottom: 20px;
+    border: 1px solid #faefef; 
+    padding: 10px;
+    background-color: #fff6f6;
+    text-align: center;
+}
+
+.movie-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.movie-details-button {
+    margin-top: 10px;
+}
+
+
